@@ -35,7 +35,9 @@ public class Main extends Application {
 		pane2.getChildren().addAll( btnMeusCursos, btnAllCursos, label);
 		pane2.getChildren().add(combo);
 		 
-		
+		btnAllCursos.setOnAction(new EventHandler<ActionEvent>() {
+			
+		});
 		Scene scene = new Scene(pane2);
 		stage.setScene(scene);
 		stage.show();
