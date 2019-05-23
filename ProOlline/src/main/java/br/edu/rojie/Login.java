@@ -1,6 +1,6 @@
 package br.edu.rojie;
 
-import javax.swing.BorderFactory;
+
 
 import br.edu.rojie.Error;
 import br.edu.rojie.Strings;
@@ -90,8 +90,7 @@ public class Login extends Application {
 			@Override
 			public void handle(ActionEvent arg0) {
 				if(login(stage)) {
-					System.out.println("proxima tela");
-					//se entrar nessa if direciona para a proxima tela
+					
 				}
 			}
 		});

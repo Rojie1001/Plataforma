@@ -13,11 +13,30 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 public class Main extends Application {
+	Button btnMeusCursos = new Button("Meus Cursos");
+	Button btnAllCursos = new Button("Todos os Cursos");
+	
 
 	public void Main(String text) {
 		// TODO Auto-generated constructor stub
 	}
-	
+	public boolean Cursos(Stage stage) {
+		if(btnMeusCursos.getOnAction() != null)
+		try {
+			new MeusCursos().start(new Stage());
+			stage.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+//		if(btnAllCursos.getOnAction() != null)
+//			try {
+//				new AllCursos().start(new Stage());
+//				stage.close();
+//			} catch (Exception e) {
+//				e.printStackTrace();
+//			}
+		return true;
+	}
 	@Override 
 	  public void start(Stage stage) throws Exception {
 //		ArrayList<String>Combobox = new ArrayList();
@@ -26,8 +45,6 @@ public class Main extends Application {
 		AnchorPane pane2 = new AnchorPane();
 		pane2.setPrefSize(300, 200); 
 		//JComboBox combo = new JComboBox();
-		Button btnMeusCursos = new Button("Meus Cursos");
-		Button btnAllCursos = new Button("Todos os Cursos");
 		Label label = new Label("Bons Estudos Jovem Padauã");
 		label.setFont(new Font	("Station", 20));
 		pane2.getChildren().addAll(btnMeusCursos,btnAllCursos, label);
@@ -45,10 +62,12 @@ public class Main extends Application {
 		pane2.setStyle("-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, grey 0%, silver 500%);");
 	
 	
-		btnAllCursos.setOnAction(new EventHandler<ActionEvent>() {
+		btnMeusCursos.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent arg0) {
-				// TODO Auto-generated method stub
+				if(Cursos(stage)) {
+					
+				}
 				
 			}
 			
