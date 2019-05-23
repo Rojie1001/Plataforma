@@ -1,5 +1,7 @@
 package br.edu.rojie;
 
+import javax.swing.BorderFactory;
+
 import br.edu.rojie.Error;
 import br.edu.rojie.Strings;
 import javafx.application.Application;
@@ -70,6 +72,7 @@ public class Login extends Application {
 		pane1.getChildren().addAll(txLogin, txSenha, btEntrar, btSair);
 
 		Scene scene = new Scene(pane1);
+		stage.setTitle("Login");
 		stage.setScene(scene);
 		stage.show();
 		txLogin.setLayoutX((pane1.getWidth() - txLogin.getWidth()) / 2);

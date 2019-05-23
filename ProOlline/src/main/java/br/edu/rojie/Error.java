@@ -21,8 +21,9 @@ public class Error extends Application {
 	public void start(Stage stage) throws Exception {
 		// creating the classes hierarchy (pane -> scene -> stage)
 		AnchorPane pane = new AnchorPane();
-		pane.setPrefSize(280, 120);
+		pane.setPrefSize(100, 100);
 		Scene scene = new Scene(pane);
+		stage.setTitle("ERROR");
 		stage.setScene(scene);
 
 		// creating the label component
@@ -32,8 +33,8 @@ public class Error extends Application {
 
 		// creating the login button
 		Button btnOk = new Button(Strings.btnOk);
-		btnOk.setLayoutX(167);
-		btnOk.setLayoutY(10);
+		btnOk.setLayoutX(50);
+		btnOk.setLayoutY(30);
 		btnOk.setOnMouseClicked(e -> close(stage));
 
 		// adding all created components to the pane

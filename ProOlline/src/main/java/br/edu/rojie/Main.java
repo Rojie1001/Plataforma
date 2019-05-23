@@ -9,6 +9,7 @@ import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 public class Main extends Application {
@@ -23,13 +24,15 @@ public class Main extends Application {
 //		Combobox.add("Meus Cursos");
 //		Combobox.add("Cursos em andamento")
 		AnchorPane pane2 = new AnchorPane();
-		pane2.setPrefSize(500, 400); 
+		pane2.setPrefSize(300, 200); 
 		//JComboBox combo = new JComboBox();
 		Button btnMeusCursos = new Button("Meus Cursos");
 		Button btnAllCursos = new Button("Todos os Cursos");
 		Label label = new Label("Bons Estudos Jovem Padauã");
+		label.setFont(new Font	("Station", 20));
 		pane2.getChildren().addAll(btnMeusCursos,btnAllCursos, label);
 		Scene scene = new Scene(pane2);
+		stage.setTitle("Tela Inicial");
 		stage.setScene(scene);
 		stage.show();
 		
