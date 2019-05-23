@@ -1,7 +1,5 @@
 package br.edu.rojie;
 
-import javax.swing.JOptionPane;
-
 import br.edu.rojie.Error;
 import br.edu.rojie.Strings;
 import javafx.application.Application;
@@ -16,10 +14,8 @@ import javafx.stage.Stage;
 
 public class Login extends Application {
 
-	private AnchorPane pane1;
 	private TextField txLogin = new TextField();
 	private PasswordField txSenha = new PasswordField();
-	private Button button = new Button();
 	private static Stage stage;
 
 	public static void main(String[] args) {
@@ -55,11 +51,12 @@ public class Login extends Application {
 		}
 
 		try {
-			new Main(txLogin.getText()).start(new Stage());
+			new Main().start(new Stage());
 			stage.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		
 		return true;
 	}
 
@@ -67,9 +64,7 @@ public class Login extends Application {
 	public void start(Stage stage) throws Exception {
 		AnchorPane pane1 = new AnchorPane();
 		pane1.setPrefSize(300, 200);
-		TextField txLogin = new TextField();
 		txLogin.setPromptText("Username");
-		PasswordField txSenha = new PasswordField();
 		txSenha.setPromptText("Digite sua senha");
 		Button btEntrar = new Button("Entrar");
 		Button btSair = new Button("Sair");
