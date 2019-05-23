@@ -16,7 +16,6 @@ public class Login extends Application {
 
 	private TextField txLogin = new TextField();
 	private PasswordField txSenha = new PasswordField();
-	private static Stage stage;
 
 	public static void main(String[] args) {
 		launch(args);
