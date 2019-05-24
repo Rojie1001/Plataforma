@@ -1,5 +1,6 @@
-package br.edu.rojie;
+package Telas;
 
+import Entidades.Strings;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
