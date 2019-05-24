@@ -9,6 +9,18 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 public class MeusCursos extends Application {
+	private Button btnVoltar = new Button("Voltar");
+	 
+	
+	public void Voltar(Stage stage) {
+	
+	try {
+		new Main().start(new Stage());
+		stage.close();
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+}
 
 //	public void Mobile(Stage stage) {
 //		
@@ -19,15 +31,15 @@ public class MeusCursos extends Application {
 //			e.printStackTrace();
 //		}
 //}
-//	public void FrontEnd(Stage stage) {
-//		
-//		try {
-//			new FrontEnd().start(new Stage());
-//			stage.close();
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//}
+	public void FrontEnd(Stage stage) {
+		
+		try {
+			new FrontEnd().start(new Stage());
+			stage.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+}
 //	public void IntroducaoJava(Stage stage) {
 //		
 //		try {
@@ -66,7 +78,7 @@ public class MeusCursos extends Application {
 			Button button3 = new Button("Retomar Atividades");
 			pane6.getChildren().addAll(label3, button3);
 			
-		pane3.getChildren().addAll(pane4, pane5, pane6);
+		pane3.getChildren().addAll(pane4, pane5, pane6, btnVoltar);
 		
 		Scene scene = new Scene(pane3);
 		stage.setTitle("Seus Cursos");
@@ -96,6 +108,10 @@ public class MeusCursos extends Application {
 			label3.setLayoutX((pane6.getWidth() - label3.getWidth()) / 2);
 			label3.setLayoutY(10);
 			
+			btnVoltar.setLayoutX((pane3.getWidth() - btnVoltar.getWidth()) / 10);
+			btnVoltar.setLayoutY(400);
+			btnVoltar.setPrefSize(50,50);
+			
 			//CSS
 			pane3.setStyle("-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, pink 0%, silver 800%);");
 			pane4.setStyle("-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, gray 0%, white  500%);");
@@ -106,16 +122,17 @@ public class MeusCursos extends Application {
 //				Mobile(stage);
 //
 //			});
-//			button2.setOnAction(e -> {
-//				FrontEnd(stage);
-//
-//			});
+			button2.setOnAction(e -> {
+				FrontEnd(stage);
+
+			});
 //			button3.setOnAction(e -> {
 //				IntroducaoJava(stage);
 //
 //			});
-		
+			btnVoltar.setOnAction(e -> {
+		Voltar(stage);
+	});
+
 	}
-
-
 }

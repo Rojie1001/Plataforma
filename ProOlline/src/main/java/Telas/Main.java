@@ -15,6 +15,7 @@ public class Main extends Application {
 	Button btnMeusCursos = new Button("Meus Cursos");
 	Button btnAllCursos = new Button("Todos os Cursos");
 
+
 	public void Cursos(Stage stage) {
 		
 			try {
@@ -49,9 +50,9 @@ public class Main extends Application {
 		stage.setScene(scene);
 		stage.show();
 
-		btnMeusCursos.setLayoutX((pane2.getWidth() - btnMeusCursos.getWidth()) / 10);
+		btnMeusCursos.setLayoutX((pane2.getWidth() - btnMeusCursos.getWidth()) / 2);
 		btnMeusCursos.setLayoutY(50);
-		btnAllCursos.setLayoutX((pane2.getWidth() - btnAllCursos.getWidth()) / 10);
+		btnAllCursos.setLayoutX((pane2.getWidth() - btnAllCursos.getWidth()) / 2);
 		btnAllCursos.setLayoutY(100);
 		label.setLayoutX((pane2.getWidth() - label.getWidth()) / 2);
 		label.setLayoutY(20);

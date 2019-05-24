@@ -9,6 +9,18 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 public class AllCursos extends Application {
+private Button btnVoltar = new Button("Voltar");
+	 
+	
+	public void Voltar(Stage stage) {
+	
+	try {
+		new Main().start(new Stage());
+		stage.close();
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+}
 
 
 		@Override
@@ -63,7 +75,7 @@ public class AllCursos extends Application {
 					Button button6 = new Button("Iniciar");
 					pane9.getChildren().addAll(label6, button6);					
 				
-			pane3.getChildren().addAll(pane4, pane5, pane6, pane7, pane8, pane9	, label);
+			pane3.getChildren().addAll(pane4, pane5, pane6, pane7, pane8, pane9	, label, btnVoltar);
 			
 			Scene scene = new Scene(pane3);
 			stage.setTitle("Seus Cursos");
@@ -116,6 +128,10 @@ public class AllCursos extends Application {
 				
 				label.setLayoutX((pane3.getWidth() - label.getWidth()) / 2);
 				label.setLayoutY(500);
+				
+				btnVoltar.setLayoutX((pane3.getWidth() - btnVoltar.getWidth()) / 10);
+				btnVoltar.setLayoutY(400);
+				btnVoltar.setPrefSize(70,70);
 			
 		
 		
@@ -127,5 +143,9 @@ public class AllCursos extends Application {
 		pane8.setStyle("-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, white 0%, white  500%);");
 		pane9.setStyle("-fx-background-color: linear-gradient(from 0% 0% to 100% 100%,  white 0%, white 500%);");
 		label.setStyle("-fx Text-fill:red;");
-	}
+		
+		btnVoltar.setOnAction(e -> {
+			Voltar(stage);
+		});
+}
 }

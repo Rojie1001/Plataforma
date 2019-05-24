@@ -16,7 +16,7 @@ import javafx.stage.Stage;
 public class Login extends Application {
 
 	private TextField txLogin = new TextField();
-	private PasswordField txSenha = new PasswordField();
+	private PasswordField txSenha = new PasswordField(); 
 
 	public static void main(String[] args) {
 		launch(args);
