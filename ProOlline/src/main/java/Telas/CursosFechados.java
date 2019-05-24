@@ -1,6 +1,7 @@
 package Telas;
 
-import Entidades.Strings;
+
+
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -8,8 +9,11 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
+import jfxtras.animation.Timer;
 
 public class CursosFechados extends Application{
+	
+	
 	private Button btnVoltar = new Button("Voltar"); 
 	
 	public void Voltar(Stage stage) {
@@ -20,6 +24,10 @@ public class CursosFechados extends Application{
 	} catch (Exception e) {
 		e.printStackTrace();
 	}
+}
+	public void texto (String string) {
+		System.out.println("Bem VIndo");
+
 }
 	@Override
 	public void start(Stage stage) throws Exception {
@@ -32,6 +40,7 @@ public class CursosFechados extends Application{
 		Label label1 = new Label(" Informaremos Você ao iniciar as atividade do Curso");
 		label1.setFont(new Font("Arial Black",30));
 		pane.getChildren().addAll(label, btnVoltar, label1);
+		
 		
 		Scene scene = new Scene(pane);
 		stage.setTitle("Novos Cursos");

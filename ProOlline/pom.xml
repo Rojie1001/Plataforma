@@ -27,11 +27,12 @@
     <artifactId>jfoenix</artifactId>
     <version>8.0.1</version>
 </dependency>
-   <dependency>
-        <groupId>org.kordamp.bootstrapfx</groupId>
-        <artifactId>bootstrapfx-core</artifactId>
-        <version>0.2.4</version>
-    </dependency>
-    
+
+<dependency>
+  <groupId>org.jfxtras</groupId>
+  <artifactId>jfxtras-all</artifactId>
+  <version>9.0-r1</version>
+</dependency>
+
   </dependencies>
 </project>

@@ -1,6 +1,7 @@
 package Entidades;
 
 public class Strings {
+	
 	public static final String cont = "CONTEÚDO DA AULA";
 	public static final String responda = "QUESTIONÁRIO";
 	public static final String appTitle = "Hello UI";
