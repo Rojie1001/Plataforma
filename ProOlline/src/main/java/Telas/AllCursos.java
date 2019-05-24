@@ -21,6 +21,15 @@ private Button btnVoltar = new Button("Voltar");
 		e.printStackTrace();
 	}
 }
+public void CursosFechados(Stage stage) {
+		
+		try {
+			new CursosFechados().start(new Stage());
+			stage.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+}
 
 
 		@Override
@@ -146,6 +155,30 @@ private Button btnVoltar = new Button("Voltar");
 		
 		btnVoltar.setOnAction(e -> {
 			Voltar(stage);
+		});
+		button1.setOnAction(e -> {
+			CursosFechados(stage);
+
+		});
+		button2.setOnAction(e -> {
+			CursosFechados(stage);
+
+		});
+		button3.setOnAction(e -> {
+			CursosFechados(stage);
+
+		});
+		button4.setOnAction(e -> {
+			CursosFechados(stage);
+
+		});
+		button5.setOnAction(e -> {
+			CursosFechados(stage);
+
+		});
+		button6.setOnAction(e -> {
+			CursosFechados(stage);
+
 		});
 }
 }

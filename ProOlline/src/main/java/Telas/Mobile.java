@@ -13,7 +13,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
-public class FrontEnd extends Application{
+public class Mobile extends Application{
 private Button btnVoltar = new Button("Voltar"); 
 private TextArea feed = new TextArea();
 		
@@ -43,7 +43,7 @@ private TextArea feed = new TextArea();
 		pane.setPrefSize(1000,1000);
 		Label label = new Label(Strings.cont);
 		label.setFont(new Font	("Arial Black", 40));
-		Label label1 = new Label(Strings.quest);
+		Label label1 = new Label(Strings.quest1);
 		Label label2 = new Label(Strings.responda);
 		label2.setFont(new Font	("Arial Black", 20));
 		CheckBox check1 = new CheckBox(Strings.p1);
